@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Best Web Agency - We build fast, SEO-ready websites with global CDN support. Low cost, unlimited revisions, global offices.">
+    <meta name="keywords" content="web agency, web design, web development, SEO, fast websites">
+    <meta name="author" content="Best Web Agency">
+    <meta property="og:title" content="Best Web Agency - Professional Web Solutions">
+    <meta property="og:description" content="We build fast, SEO-ready websites with global CDN support. Low cost, unlimited revisions, global offices.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bws.com">
+    <title>Best Web Agency - Professional Web Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .btn-hover {
+            @apply hover:scale-105 transform transition duration-300 ease-in-out;
+        }
+        
+        .card-hover {
+            @apply hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out;
+        }
+        
+        .nav-link-hover {
+            @apply hover:text-blue-600 transition duration-300 ease-in-out;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .accordion-item {
+            @apply border-b border-gray-200;
+        }
+        
+        .accordion-button {
+            @apply w-full text-left py-4 px-6 font-semibold text-gray-800 hover:bg-gray-50 transition duration-300 flex justify-between items-center;
+        }
+        
+        .accordion-button.active {
+            @apply bg-blue-50 text-blue-600;
+        }
+        
+        .accordion-content {
+            @apply max-h-0 overflow-hidden transition-all duration-300 ease-in-out;
+        }
+        
+        .accordion-content.active {
+            @apply max-h-96;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+        
+        .feature-icon {
+            @apply w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-xl;
+        }
+        
+        .benefit-icon {
+            @apply w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold text-2xl;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-blue-600">BWA</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="nav-link-hover text-gray-700 font-medium">Features</a>
+                <a href="#benefits" class="nav-link-hover text-gray-700 font-medium">Benefits</a>
+                <a href="#faq" class="nav-link-hover text-gray-700 font-medium">FAQ</a>
+                <a href="#contact" class="nav-link-hover text-gray-700 font-medium">Contact</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <a href="https://bws.com" class="btn-hover bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold">Get Started</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#features" class="block text-gray-700 font-medium hover:text-blue-600">Features</a>
+                <a href="#benefits" class="block text-gray-700 font-medium hover:text-blue-600">Benefits</a>
+                <a href="#faq" class="block text-gray-700 font-medium hover:text-blue-600">FAQ</a>
+                <a href="#contact" class="block text-gray-700 font-medium hover:text-blue-600">Contact</a>
+                <a href="https://bws.com" class="block btn-hover bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold text-center">Get Started</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient py-24 md:py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                        We build <span class="text-blue-600">websites</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8 max-w-xl">
+                        Fast, SEO-ready, and globally distributed. Get your website built by experts who understand what it takes to succeed online.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://bws.com" class="btn-hover inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-700">
+                            Start Your Project
+                        </a>
+                        <a href="#features" class="btn-hover inline-block border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-50">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl transform -rotate-3"></div>
+                        <div class="relative bg-white rounded-2xl shadow-2xl p-8">
+                            <div class="space-y-4">
+                                <div class="h-3 bg-gray-200 rounded w-3/4"></div>
+                                <div class="h-3 bg-gray-200 rounded w-full"></div>
+                                <div class="h-3 bg-gray-200 rounded w-5/6"></div>
+                                <div class="h-24 bg-gradient-to-r from-blue-100 to-blue-50 rounded mt-8"></div>
+                                <div class="grid grid-cols-3 gap-4 mt-8">
+                                    <div class="h-16 bg-gray-100 rounded"></div>
+                                    <div class="h-16 bg-gray-100 rounded"></div>
+                                    <div class="h-16 bg-gray-100 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="py-24 md:py-32 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Powerful Features
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Everything you need to create a stunning, high-performing website
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1: Fast -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border border-gray-100">
+                    <div class="feature-icon mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning Fast</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Optimized performance with lightning-fast load times. Your website will rank higher in search results and keep visitors engaged.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: SEO Ready -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border border-gray-100">
+                    <div class="feature-icon mb-4">🔍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">SEO Ready</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Built with search engine optimization in mind. Get organic traffic from day one with our SEO-optimized architecture.
+                    </p>
+                </div>
+                
+                <!-- Feature 3: Global CDN -->
+                <div class="card-hover bg-white rounded-xl shadow-md p-8 border border-gray-100">
+                    <div class="feature-icon mb-4">🌍</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Global CDN</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Served from data centers worldwide. Your content reaches users instantly, no matter where they are located.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-24 md:py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Why Choose Us
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    We're committed to delivering exceptional value and service
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Benefit 1: Low Cost -->
+                <div class="text-center">
+                    <div class="benefit-icon mx-auto mb-6">💰</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Affordable Pricing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Premium quality without premium prices. We believe great web design should be accessible to businesses of all sizes.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2: Unlimited Revisions -->
+                <div class="text-center">
+                    <div class="benefit-icon mx-auto mb-6">♻️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Unlimited Revisions</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We don't stop until you're happy. Unlimited revisions ensure your website is exactly what you envision.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3: Global Offices -->
+                <div class="text-center">
+                    <div class="benefit-icon mx-auto mb-6">🏢</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Global Support</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        With offices around the world, we're always available to support your project, regardless of your timezone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-24 md:py-32 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 tracking-tight">
+                Ready to Transform Your Online Presence?
+            </h2>
+            <p class="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Join hundreds of satisfied clients who have transformed their businesses with our web solutions.
+            </p>
+            <a href="https://bws.com" class="btn-hover inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100">
+                Get Started Today
+            </a>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 md:py-32 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Everything you need to know about our services
+                </p>
+            </div>
+            
+            <div class="space-y-2 bg-white rounded-xl shadow-md overflow-hidden">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        <span>How long does it take to build a website?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-4 text-gray-600 leading-relaxed">
+                            Most websites take between 4-8 weeks depending on complexity. We provide a detailed timeline during the initial consultation so you know exactly what to expect.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        <span>Do you provide ongoing support?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-4 text-gray-600 leading-relaxed">
+                            Yes! We offer comprehensive support packages including maintenance, updates, and technical support. We're here to help your website succeed long-term.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        <span>Can you help with SEO optimization?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-4 text-gray-600 leading-relaxed">
+                            Absolutely! SEO is built into every website we create. We also offer dedicated SEO services to help you rank higher in search results and attract organic traffic.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        <span>What technologies do you use?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-4 text-gray-600 leading-relaxed">
+                            We use modern, industry-standard technologies including React, Next.js, Node.js, and cloud platforms. We choose the best tools for your specific project needs.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        <span>Is my website mobile-friendly?</span>
+                        <svg class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="px-6 pb-4 text-gray-600 leading-relaxed">
+                            Every website we build is fully responsive and mobile-optimized. We test across all devices to ensure perfect functionality and appearance everywhere.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 md:py-32 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Ready to start your project? Contact us today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                        <a href="mailto:admin@bws.com" class="text-blue-600 hover:text-blue-700 text-lg font-medium">
+                            admin@bws.com
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Our Locations</h3>
+                        <div class="space-y-3">
+                            <p class="text-gray-600">
+                                <span class="font-semibold">North America</span><br>
+                                123 Web Street, Tech City, TC 12345
+                            </p>
+                            <p class="text-gray-600">
+                                <span class="font-semibold">Europe</span><br>
+                                456 Digital Avenue, Innovation Hub, IH 67890
+                            </p>
+                            <p class="text-gray-600">
+                                <span class="font-semibold">Asia Pacific</span><br>
+                                789 Cloud Road, Future City, FC 11111
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-xl p-8 border border-gray-200">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-900 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-900 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-gray-900 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-hover w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Best Web Agency</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Building exceptional websites that drive results for businesses worldwide.
+                    </p>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Web Design</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Development</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">SEO Optimization</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Divider -->
+            <div class="border-t border-gray-800 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 Best Web Agency. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white transition duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 002.856-3.515 10.009 10.009 0 01-2.8.856 4.958 4.958 0 002.165-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-
